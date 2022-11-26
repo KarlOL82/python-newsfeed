@@ -140,11 +140,6 @@ def update(id):
     data = request.get_json()
     db = get_db()
 
-    @bp.route('/posts/<id>', methods=['PUT'])
-def update(id):
-    data = request.get_json()
-    db = get_db()
-
     try:
         # retrieve post and update title property
         post = db.query(Post).filter(Post.id == id).one()
